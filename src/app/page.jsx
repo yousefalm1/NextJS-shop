@@ -1,8 +1,8 @@
 import Image from "next/image";
-import products from "./products";
 
 import cookieStore from "../assets/images/cookie-store.jpg";
 import ProductItem from "./components/ProductItem";
+import ProductList from "./components/ProductList";
 
 const Home = () => {
   return (
@@ -21,10 +21,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-row gap-8 ">
-        <ProductItem />
-        <ProductItem />
-      </div>
+      <ProductList />
     </>
   );
 };
