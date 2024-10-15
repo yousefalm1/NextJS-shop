@@ -1,21 +1,17 @@
 import Image from "next/image";
-import products from "../products";
 
-export const ProductItem = () => {
+const ProductItem = ({ name, image, price }) => {
   return (
-    <div
-      key={products[0].name}
-      className=" bg-black w-60 h-60 rounded-xl flex flex-col items-center justify-center"
-    >
+    <div key={name} className="flex flex-col items-center">
       <Image
-        src={products[0].image}
-        width={100}
-        height={100}
-        className="rounded-full py-4"
-        alt="Choco Chip"
+        src={image}
+        width={200}
+        height={200}
+        className="w-48 h-48 object-cover py-4 rounded-3xl"
+        alt={name}
       />
-      <h1 className="">{products[0].name}</h1>
-      <p>{products[0].price}</p>
+      <h1 className="text-lg font-bold text-gray-800">{name}</h1>
+      <p className="text-gray-600 font-bold">{price}</p>
     </div>
   );
 };
