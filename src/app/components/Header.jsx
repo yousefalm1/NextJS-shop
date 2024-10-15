@@ -1,4 +1,5 @@
-"use client"; // This tells Next.js that this is a Client Component
+"use client";
+
 import { useState } from "react";
 
 import Image from "next/image";
@@ -14,11 +15,11 @@ const Header = () => {
   return (
     <div className="flex justify-center">
       <div className=" items-center">
-        <h1 className=" text-7xl mt-6 text-gray-800 text-center">
+        <h1 className=" text-7xl mt-6 text-gray-800 text-center font-serif">
           The Dough Bros
         </h1>
-        <p className="mt-4 font-bold text-2xl text-center text-gray-600">
-          Best bakery in kuwait
+        <p className="mt-4 font-semibold text-2xl text-center text-gray-600 font-serif">
+          The Best Bakery In Town
         </p>
         <Image
           src={bakeryStore}
@@ -28,10 +29,12 @@ const Header = () => {
           className=" flex justify-center rounded-full my-6"
         />
         <div className="flex space-x-5 justify-center">
-          <h1 className="text-4xl text-black">{visitorCount} Visitors</h1>
+          <h1 className="font-serif text-4xl text-black">
+            {visitorCount} Visitors
+          </h1>
           <button
             onClick={handleIncrease}
-            className="text-2xl text-gray-300 bg-gray-700 p-2 rounded-3xl hover:bg-gray-800 "
+            className=" font-serif text-2xl text-white bg-gray-700 p-2 rounded-3xl hover:bg-gray-800 font-bold "
           >
             Click Me Please
           </button>
